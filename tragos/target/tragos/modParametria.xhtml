@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Tragos - Mesera</title>
+	<h:outputStylesheet library="css" name="style.css"  />
+</h:head>
+
+<h:body>
+	<h:form id="form">
+		<p:growl id="mensaje" showDetail="true" sticky="true" />
+		<p:panel header="Modificacion de la parametria del aplicativo" footer="Cilantro Bar">
+
+			<p:dataTable var="parametro" value="#{parametriaBean.listaParametria}"	id="carList" editable="true">
+				<p:ajax event="rowEdit" listener="#{parametriaBean.onEdit}"
+					update=":form:mensaje" />
+				<p:ajax event="rowEditCancel" listener="#{parametriaBean.onCancel}"
+					update=":form:mensaje" />
+	
+				<p:column headerText="Nombre Parametro" style="width:125px">
+					<h:outputText value="#{parametro.nombre}" />
+				</p:column>
+				<p:column headerText="Valor" style="width:125px">
+					<p:cellEditor>
+						<f:facet name="output">
+							<h:outputText value="#{parametro.valor}" />
+						</f:facet>
+						<f:facet name="input">
+							<p:inputText value="#{parametro.valor}" style="width:100%" />
+						</f:facet>
+					</p:cellEditor>
+				</p:column>
+				<p:column headerText="Descripción" style="width:125px">
+					<h:outputText value="#{parametro.descripcion}" />
+				</p:column>
+				<p:column headerText="Options" style="width:50px">
+					<p:rowEditor />
+				</p:column>
+	
+			</p:dataTable>
+		</p:panel>
+	</h:form>
+</h:body>
+
+</html>

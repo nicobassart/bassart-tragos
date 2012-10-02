@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+        <title>Tragos - Consola Administración</title>
+        <h:outputStylesheet library="css" name="style.css"  />
+    </h:head>
+    <h:body>
+    	<p:panel header="Consola de administración" footer="Cilantro Bar">
+	    	<!--Desde acá tendria que poder modificar la parametria y tambien poder cerrar las mesas  -->
+			<p:button outcome="modParametria" value="Parametria" icon="ui-icon-star" styleClass="botonAdmin"/>  
+			<p:button outcome="cerrarMesa" value="Cerrar Mesa" icon="ui-icon-star" styleClass="botonAdmin"/>  
+			<p:button outcome="seleccionMesera1" value="Pantalla Mesera 1" icon="ui-icon-star" styleClass="botonAdmin"/>
+			<p:button outcome="seleccionMesera2" value="Pantalla Mesera 2" icon="ui-icon-star" styleClass="botonAdmin"/>
+			<p:button outcome="seleccionMesera3" value="Pantalla Mesera 3" icon="ui-icon-star" styleClass="botonAdmin"/>
+			<p:button outcome="seleccionBarra" value="Pantalla Barra" icon="ui-icon-star" styleClass="botonAdmin"/>
+			<p:button outcome="pantalla" value="Proyector Tragos" icon="ui-icon-star" styleClass="botonAdmin"/>
+			<p:button outcome="modParametriaTragos" value="Parametria Tragos" icon="ui-icon-star" styleClass="botonAdmin"/>
+		</p:panel>  
+    </h:body>
+</html>
