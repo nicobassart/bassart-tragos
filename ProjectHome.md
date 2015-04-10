@@ -1,0 +1,1 @@
+Permite administrar los tragos.
